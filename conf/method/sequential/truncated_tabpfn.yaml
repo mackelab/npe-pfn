@@ -1,0 +1,11 @@
+num_rounds: 10
+proposal_batch_size: 10000
+simulation_batch_size: 1000
+num_samples_to_estimate_support: 20000
+allowed_false_negatives: 0.001
+context_size: 10000
+log_prob_mode: ratio_based
+sampling_method: rejection # or sir
+max_iter_rejection: 1000
+oversample_sir: 100 # should divide proposal_batch_size
+filtering: standardized_euclidean_filtering

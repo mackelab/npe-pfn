@@ -1,0 +1,4 @@
+name: gas
+num_simulations: 10000000
+params:
+  data_dir: ${oc.env:WORK}

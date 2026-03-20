@@ -1,0 +1,18 @@
+# @package _global_
+name: sbibm_seq
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0
+      eval: c2st
+      eval.observation_ids: "[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]"
+      method: tsnpe #, snle, snre, snpe
+      task: lotka_volterra
+      task.num_simulations: 100_000
+      method.truncation.sample_with: sir
+
+defaults:
+  - _self_
+  - override /partition: cpu2

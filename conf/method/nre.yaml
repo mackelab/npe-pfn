@@ -1,0 +1,8 @@
+name: nre
+device: "cpu"
+show_progress_bars: False
+defaults:
+  - train: default_sbi
+  - estimator: classifier
+  - embedding_net: none
+  - sampler: mcmc

@@ -1,0 +1,10 @@
+name: npe_ensemble
+device: "cpu"
+show_progress_bars: False
+num_estimators: 5
+use_multiprocessing: False
+defaults:
+  - train: default_sbi
+  - estimator: nsf
+  - embedding_net: none
+  - sampler: direct

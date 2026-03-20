@@ -1,0 +1,3 @@
+name: nonlinear_gaussian_tree
+num_simulations: 1000
+params: {}

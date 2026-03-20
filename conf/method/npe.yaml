@@ -1,0 +1,8 @@
+name: npe
+device: "cpu"
+show_progress_bars: False
+defaults:
+  - train: default_sbi
+  - estimator: nsf
+  - embedding_net: none
+  - sampler: direct

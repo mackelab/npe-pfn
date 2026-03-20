@@ -1,0 +1,16 @@
+# @package _global_
+name: sbibm_sweeper
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0
+      eval: c2st
+      method: npe_sweeper
+      task: gaussian_linear, two_moons, gaussian_mixture, bernoulli_glm, slcp
+      task.num_simulations: 100, 1000, 10_000, 100_000
+
+defaults:
+  - _self_
+  - override /partition: cpu4 # long time_out important for sbibm_sweeper

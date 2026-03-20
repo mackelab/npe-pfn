@@ -1,0 +1,17 @@
+# @package _global_
+name: sbibm_seq
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0
+      eval: c2st
+      eval.observation_ids: "[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]"
+      method: tsnpe #, snle, snre, snpe
+      task: two_moons, bernoulli_glm, slcp #, gaussian_linear, gaussian_mixture
+      task.num_simulations: 100, 1_000, 10_000, 100_000
+
+defaults:
+  - _self_
+  - override /partition: cpu1

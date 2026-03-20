@@ -1,0 +1,9 @@
+name: npe_infomax
+device: "cpu"
+show_progress_bars: False
+defaults:
+  - train: default_sbi
+  - pretraining: infomax
+  - estimator: nsf
+  - embedding_net: mlp
+  - sampler: direct

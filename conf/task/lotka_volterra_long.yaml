@@ -1,0 +1,4 @@
+name: lotka_volterra_long
+num_simulations: 1000
+params:
+  flatten: true

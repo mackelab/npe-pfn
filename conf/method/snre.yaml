@@ -1,0 +1,9 @@
+name: snre
+device: "cpu"
+show_progress_bars: False
+num_rounds: 10
+defaults:
+  - train: default_sbi
+  - estimator: classifier
+  - embedding_net: none
+  - sampler: mcmc

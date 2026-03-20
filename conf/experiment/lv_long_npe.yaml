@@ -1,0 +1,23 @@
+# @package _global_
+
+name: sbibm_lv_long
+launcher:
+  slurm:
+    mem_gb: 32  # Allocate 32 GB of memory
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0,1,2,3,4  # Will be 17 jobs * seeds
+      method: npe
+      method/embedding_net: cnn1d
+      task: lotka_volterra_long
+      task.num_simulations: 1000, 10_000, 100_000
+      task.params.flatten: false
+
+
+
+defaults:
+  - _self_
+  - override /partition: cpu_ferranti

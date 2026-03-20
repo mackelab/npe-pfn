@@ -1,0 +1,16 @@
+# @package _global_
+name: sbibm_newtasks
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0,1,2,3,4 # Will be 44 jobs * seeds
+      eval: nll_sbc
+      method: filtered_tabpfn
+      task: weinberg, mg1
+      task.num_simulations: 100, 1000, 10_000, 100_000
+
+defaults:
+  - _self_
+  - override /partition: h100

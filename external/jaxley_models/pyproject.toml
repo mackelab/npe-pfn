@@ -1,0 +1,20 @@
+[project]
+name = "jaxley-models"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "jax[cpu]>=0.4.31",
+    "jaxley>=0.7.0",
+    "pandas>=2.2.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=8.32.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.0",
+    "nbdime>=4.0.2",
+    "pytest>=8.3.4",
+]

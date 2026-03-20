@@ -1,0 +1,21 @@
+# @package _global_
+name: flexible_linear
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0 #[0, 1, 2]
+      eval: c2st
+      method: npe
+      task: flexible_linear
+      task.num_simulations: 100, 1000, 2000 # 500
+      task.params.noise_scale: 1.0, 2.0
+      task.params.feature_scale: 1.0, 2.0
+      task.params.dim: 5 #, 10 #, 20
+      task.params.feature_dist: normal #, studentt, laplace, cauchy, logistic, logitnormal
+      task.params.noise_dist: normal #, studentt, laplace, cauchy, logistic, logitnormal
+
+defaults:
+  - _self_
+  - override /partition: gpu

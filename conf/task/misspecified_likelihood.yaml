@@ -1,0 +1,6 @@
+name: misspecified_likelihood
+num_simulations: 100
+params:
+  dim: 2
+  tau_m: 2.0 #16 #2.0 # misspecified prior variance
+  lambda_val: 0.5 #0.8 #0.5 # mixture weight

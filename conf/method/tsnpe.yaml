@@ -1,0 +1,16 @@
+name: tsnpe
+device: "cpu"
+show_progress_bars: False
+num_rounds: 10
+defaults:
+  - train: default_sbi
+  - estimator: nsf
+  - embedding_net: none
+  - sampler: direct
+
+train:
+  force_first_round_loss: True
+
+truncation:
+  density_threshold_quantile: 1e-3
+  sample_with: rejection

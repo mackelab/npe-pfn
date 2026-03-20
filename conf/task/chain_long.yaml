@@ -1,0 +1,3 @@
+name: nonlinear_marcov_chain_long
+num_simulations: 1000
+params: {}

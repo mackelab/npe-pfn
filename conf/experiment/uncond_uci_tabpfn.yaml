@@ -1,0 +1,20 @@
+# @package _global_
+name: uncond_uci
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0, 1, 2, 3, 4
+      eval: log_prob
+      eval.observation_ids: [1]
+      method: uncond_tabpfn
+      # method.num_clusters: 1, 10, 100
+      method.num_clusters: 1
+      task: gas, power, hepmass, miniboone
+      task.num_simulations: 1_000
+
+
+defaults:
+  - _self_
+  - override /partition: gpu

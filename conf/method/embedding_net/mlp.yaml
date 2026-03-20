@@ -1,0 +1,5 @@
+name: 'mlp'
+params:
+  output_dim: 50
+  num_layers: 2
+  num_hiddens: 500

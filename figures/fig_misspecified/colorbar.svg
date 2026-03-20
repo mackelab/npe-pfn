@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="53.363225pt" height="66.982781pt" viewBox="0 0 53.363225 66.982781" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2025-04-22T11:34:41.745389</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 66.982781 
+L 53.363225 66.982781 
+L 53.363225 0 
+L 0 0 
+L 0 66.982781 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 7.2 54.773016 
+L 9.4176 54.773016 
+L 9.4176 10.421016 
+L 7.2 10.421016 
+L 7.2 54.773016 
+z
+" style="fill: none"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAAkAAAC5CAYAAAD6WxVlAAABIUlEQVR4nN2ZwY3FMBBCgUm2sl/C9l/Jj2dLMAc0cjZnxCNgRZbCD38bm+di1U6DCxRCTqKDYwynWRxTmZQKDg9HR1QpJ84GpyHqGg3enhNGccWUEzHZeDs4KPV27QWHg4Mh0nDjOC84Z3GVygTrPCmFa+uDwZcOjLf2hFxwOjimRB0LjuFZ9NKBwf/deL+zcagPHLgNkU6soPcixs4TOOpEpyceiJNimejgmApOJ1NphXCVaxyjuHIqUDD4SuFoiC6mcNdsT5ee2QrWXlQe7nFwbeCQ6qliwQupU3BbOK6Qk6yBYQX/xgZex/VU3sBrL/qxZoHl9HWcOtUTUo2Xd56emNMKOcm5PNxe43Cc6DhxL5LjdBv3fxdnON00fhE4Tn/5nnfqVWj6oQAAAABJRU5ErkJggg==" id="imaged1e101b66c" transform="scale(1 -1) translate(0 -44.4)" x="7.2" y="-10.32" width="2.16" height="44.4"/>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mec1112fe2d" d="M 0 0 
+L 3.5 0 
+" style="stroke: #000000; stroke-width: 1.5"/>
+      </defs>
+      <g>
+       <use xlink:href="#mec1112fe2d" x="9.4176" y="54.773016" style="stroke: #000000; stroke-width: 1.5"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'Arial', sans-serif; text-anchor: start" x="16.4176" y="57.994031" transform="rotate(-0 16.4176 57.994031)">0.50</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mec1112fe2d" x="9.4176" y="32.597016" style="stroke: #000000; stroke-width: 1.5"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'Arial', sans-serif; text-anchor: start" x="16.4176" y="35.818031" transform="rotate(-0 16.4176 35.818031)">0.75</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mec1112fe2d" x="9.4176" y="10.421016" style="stroke: #000000; stroke-width: 1.5"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'Arial', sans-serif; text-anchor: start" x="16.4176" y="13.642031" transform="rotate(-0 16.4176 13.642031)">1.00</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 9px; font-family: 'Arial', sans-serif; text-anchor: middle" x="44.374475" y="32.597016" transform="rotate(-90 44.374475 32.597016)">C2ST</text>
+    </g>
+   </g>
+   <g id="LineCollection_1"/>
+  </g>
+ </g>
+</svg>

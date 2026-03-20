@@ -1,0 +1,1 @@
+Please do not wrap example code in main blocks, but rather directly add it. This way our example tests can pick them up and ensure they work correctly.

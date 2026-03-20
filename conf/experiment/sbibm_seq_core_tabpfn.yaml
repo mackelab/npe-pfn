@@ -1,0 +1,22 @@
+# @package _global_
+name: sbibm_seq
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0
+      eval: c2st
+      eval.observation_ids: "[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]"
+      method: ts_tabpfn
+      task: two_moons, bernoulli_glm, slcp #, gaussian_linear, gaussian_mixture
+      task.num_simulations: 1000, 10_000, 100_000
+      method.sequential.allowed_false_negatives: 0.001
+      method.sequential.num_samples_to_estimate_support: 10_000
+      method.sequential.filtering: standardized_euclidean_filtering
+
+
+
+defaults:
+  - _self_
+  - override /partition: gpu

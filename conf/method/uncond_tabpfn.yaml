@@ -1,0 +1,15 @@
+name: uncond_tabpfn
+num_clusters: 1
+show_progress_bars: False
+use_flex_attention: False
+max_sampling_batch_size: 10000
+regressor_init_kwargs:
+  ignore_pretraining_limits: False
+  softmax_temperature: 0.9
+classifier_init_kwargs:
+  ignore_pretraining_limits: False
+  softmax_temperature: 0.9
+
+defaults:
+  - embedding_net: none
+  - estimator: none

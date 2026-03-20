@@ -1,0 +1,17 @@
+[project]
+name = "sbibm"
+dynamic = [
+    "version",
+    "description",
+    "readme",
+    "license",
+    "authors",
+    "classifiers",
+    "dependencies",
+    "optional-dependencies",
+    "requires-python",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

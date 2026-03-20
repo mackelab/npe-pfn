@@ -1,0 +1,14 @@
+name: ts_tabpfn
+show_progress_bars: False
+use_flex_attention: False
+regressor_init_kwargs:
+  ignore_pretraining_limits: False
+  softmax_temperature: 0.9
+classifier_init_kwargs:
+  ignore_pretraining_limits: False
+  softmax_temperature: 0.9
+
+defaults:
+  - sequential: truncated_tabpfn
+  - embedding_net: none
+  - estimator: none

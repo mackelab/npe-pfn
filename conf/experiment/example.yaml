@@ -1,0 +1,17 @@
+# @package _global_
+name: example
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0
+      eval: c2st
+      method: npe
+      task: gaussian_linear
+      task.num_simulations: 1000, 10_000
+
+
+defaults:
+  - _self_
+  - override /partition: none

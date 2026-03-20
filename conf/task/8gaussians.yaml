@@ -1,0 +1,3 @@
+name: 8gaussians
+num_simulations: 1000
+params: {}

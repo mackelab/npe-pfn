@@ -1,0 +1,16 @@
+# @package _global_
+name: sbibm_newtasks
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0,1,2,3,4 # Will be 8 jobs * seeds
+      eval: nll_sbc
+      method: npe #, nle, nre
+      task: streams
+      task.num_simulations: 100
+
+defaults:
+  - _self_
+  - override /partition: cpu_ferranti

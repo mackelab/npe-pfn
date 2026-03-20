@@ -1,0 +1,18 @@
+# @package _global_
+name: permuted_sbibm
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0, 1, 2
+      eval: c2st
+      eval.num_eval_samples: 10_000
+      method: filtered_tabpfn
+      # method.use_flex_attention: True
+      task: permuted
+      task.num_simulations: 100, 1000, 10_000, 100_000
+
+defaults:
+  - _self_
+  - override /partition: gpu

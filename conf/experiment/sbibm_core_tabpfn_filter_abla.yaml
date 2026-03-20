@@ -1,0 +1,20 @@
+# @package _global_
+name: sbibm_filter_abla
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0, 1, 2, 3, 4
+      eval: c2st
+      method: filtered_tabpfn
+      method.filter_context_size: 16, 64, 256, 1024, 2048, 4096, 10000, 16384
+      method.regressor_init_kwargs.ignore_pretraining_limits: True
+      # method.use_flex_attention: True
+      task: gaussian_linear, two_moons, gaussian_mixture, bernoulli_glm, slcp
+      task.num_simulations: 100_000
+      
+      
+defaults:
+  - _self_
+  - override /partition: a100

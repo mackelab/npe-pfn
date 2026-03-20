@@ -1,0 +1,21 @@
+# @package _global_
+name: uncond_uci
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0, 1, 2, 3, 4
+      eval: log_prob
+      eval.observation_ids: [1]
+      method: npe
+      method.estimator.params.z_score_x: none
+      method.estimator.params.hidden_features: 64
+      method.estimator.params.num_transforms: 10
+      task: gas, power, hepmass, miniboone
+      task.num_simulations: 1_000, 10_000, 100_000
+
+
+defaults:
+  - _self_
+  - override /partition: cpu2

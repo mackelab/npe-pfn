@@ -1,0 +1,9 @@
+name: snle
+device: "cpu"
+show_progress_bars: False
+num_rounds: 10
+defaults:
+  - train: default_sbi
+  - estimator: maf
+  - embedding_net: none
+  - sampler: mcmc

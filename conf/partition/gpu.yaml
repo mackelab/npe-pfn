@@ -1,0 +1,9 @@
+# @package _global_
+# TODO: Insert your partition configs
+hydra:
+  mode: MULTIRUN
+  launcher:
+    timeout_min: 700
+    gres: gpu
+    cpus_per_task: 4
+    mem_gb: 32

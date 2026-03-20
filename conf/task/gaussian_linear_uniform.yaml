@@ -1,0 +1,3 @@
+name: gaussian_linear_uniform
+num_simulations: 1000
+params: {}

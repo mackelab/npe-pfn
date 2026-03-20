@@ -1,0 +1,24 @@
+# @package _global_
+
+name: spatial_sir_sbibm
+launcher:
+  slurm:
+    mem_gb: 32  # Allocate 32 GB of memory
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0,1,2,3,4  # Will be 17 jobs * seeds
+      eval: nll
+      method: filtered_tabpfn_infomax
+      method/embedding_net: cnn
+      task: spatial_sir_medium
+      task.num_simulations: 1000, 10_000, 100_000
+      task.params.flatten: False
+
+
+
+defaults:
+  - _self_
+  - override /partition: h100

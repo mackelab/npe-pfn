@@ -1,0 +1,4 @@
+name: streams
+num_simulations: 1000
+params: 
+  stream_folder: null

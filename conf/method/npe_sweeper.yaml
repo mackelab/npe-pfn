@@ -1,0 +1,12 @@
+name: npe_sweeper
+device: "cpu"
+show_progress_bars: False
+max_sweep_iterations: 1024
+max_sweep_time_seconds: 36000
+max_gradient_steps: 10000
+
+defaults:
+  - train: default_sbi
+  - estimator: nsf
+  - embedding_net: none
+  - sampler: direct

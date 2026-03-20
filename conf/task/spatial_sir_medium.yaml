@@ -1,0 +1,6 @@
+name: spatial_sir_medium
+num_simulations: 1000
+params:
+   N_grid: 44
+   T: 12
+   flatten: True

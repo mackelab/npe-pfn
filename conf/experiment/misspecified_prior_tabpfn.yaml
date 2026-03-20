@@ -1,0 +1,19 @@
+# @package _global_
+name: misspecified_prior
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0, 1, 2
+      eval: c2st
+      method: filtered_tabpfn
+      task: misspecified_prior
+      task.num_simulations: 100
+      task.dim: 2
+      task.mu_m: 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 # 10 values between 0 and 5
+      task.tau_m: 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 # 10 values between 0 and 5
+
+defaults:
+  - _self_
+  - override /partition: h100

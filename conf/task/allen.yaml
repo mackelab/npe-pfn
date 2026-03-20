@@ -1,0 +1,6 @@
+name: allen
+num_simulations: 1000
+params: 
+  observation_id: 1 # real obs used to init the simulator
+  obs_type: "real" # or "synthetic"
+  cache_dir: ${oc.env:WORK}

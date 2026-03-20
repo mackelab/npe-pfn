@@ -1,39 +1,99 @@
 [project]
-name = "npe_pfn"
+name = "tabpfn_sbi"
 version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "jupyter",
+    "hydra-core",
+    "torch==2.6.0",
+    "hydra-submitit-launcher",
+    "hydra-optuna-sweeper",
+    "matplotlib",
+    "diskcache",
+    "scikit-learn<1.7",
+    "sbi==0.23.3",
+    "sbibm",
+    "seaborn>0.13.0",
+    "svgutils==0.3.1",
+    "ipdb",
+    "torchdiffeq",
+    "tabpfn",
+    "tabpfn-extensions",
+]
+
+[project.scripts]
+tabpfnbm = "tabpfn_sbi.benchmark:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+
+[project.optional-dependencies]
+hypothesis = [
+    "hypothesis",
+    "astropy",
+    "galpy==1.8.3",
+]
+
+pyloric = [
+    "jax",
+    "jaxley",
+    "jaxley-models",
+    "pyloric @ git+https://github.com/mackelab/pyloric.git",
+]
+
+
 [tool.poetry.dependencies]
 # Add new dependencies here
-python = ">=3.10,<3.14"
-jupyter = "^1.0.0"
-torch = "~2.6.0"
-sbi = "~0.23.0"
-tabpfn = "^2.0.0"
+python = ">=3.11,<3.12"
+jupyter = "*"
+hydra-core = "*"
+torch = "=2.6.0"
+hydra-submitit-launcher = "*"
+hydra-optuna-sweeper = "*"
+matplotlib = "*"
+diskcache= "*"
+scikit-learn = "<1.7"
+sbi = "0.23.3"
+seaborn = ">0.13.0"
+svgutils = "0.3.1"
+ipdb = "*"
+torchdiffeq = "*"
+sbibm = { path = "external/sbibm", develop = true } # Prevent sbibm dependencies
+hypothesis = { version = "*", optional = true }
+astropy = { version = "*", optional = true }
+galpy = { version = "1.8.3", optional = true }
+jax = { version = "*", optional = true }
+jaxley = { version = "*", optional = true }
+"jaxley-models" = { optional = true, path = "external/jaxley_models", develop = true }
+pyloric = { optional = true, git = "https://github.com/mackelab/pyloric.git" }
+# Add your external libraries here
+tabpfn = { path = "external/tabpfn", develop = true }
+"tabpfn-extensions" = { path = "external/tabpfn_extensions", develop = true }
+
+[tool.uv.sources]
+tabpfn = { workspace = true }
+"tabpfn-extensions" = { workspace = true }
+sbibm = { workspace = true }
+"jaxley-models" = { workspace = true }
+
+[tool.uv.workspace]
+members = ["external/tabpfn", "external/tabpfn_extensions", "external/sbibm", "external/jaxley_models"]
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.0.289"
 pytest = "^8.0.0"
 
 [tool.poetry]
-name = "npe_pfn"
+name = "tabpfn_sbi"
 version = "0.1.0"
-description = "Effortless, Simulation-Efficient Bayesian Inference using Tabular Foundation Models"
-authors = ["Julius Vetter <julius.vetter@uni-tuebingen.de>",
-           "Manuel Gloeckler <manuel.gloeckler@uni-tuebingen.de>",
-           "Daniel Gedon <daniel.gedon@uni-tuebingen.de>"]
-license = "Prior Labs License 1.1"
-readme = "README.md"
-repository = "https://github.com/mackelab/npe-pfn"
-keywords = ["bayesian-inference", "tabpfn", "sbi"]
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: Prior Labs License 1.1",
-    "Operating System :: OS Independent",
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Science/Research",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence"
-]
+description = ""
+exclude = ["external/*"]
+
+[tool.poetry.scripts]
+tabpfnbm = "tabpfn_sbi.benchmark:main"
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+output-format = "full"

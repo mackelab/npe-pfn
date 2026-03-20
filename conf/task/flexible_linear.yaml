@@ -1,0 +1,13 @@
+name: flexible_linear
+num_simulations: 100
+params:
+  feature_dist: normal
+  noise_dist: normal
+  feature_scale: 1.0
+  noise_scale: 1.0
+  dim: 5
+  mcmc_cfg:
+    n_samples_mcmc: 10_000
+    n_tune: 2000
+    chains: 4
+    cores: 4

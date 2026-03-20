@@ -1,0 +1,19 @@
+# @package _global_
+name: allen_synth
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0
+      eval: sbc
+      eval.num_sbc_samples: 100
+      eval.num_posterior_samples: 100
+      method: npe
+      task: allen
+      task.num_simulations: 1000, 10000, 100000
+      task.params.obs_type: synthetic
+
+defaults:
+  - _self_
+  - override /partition: cpu1

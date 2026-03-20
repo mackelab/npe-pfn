@@ -1,0 +1,17 @@
+# @package _global_
+name: sbibm
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0  # Will be 35 jobs * seeds
+      eval: c2st
+      method: npe #, nle, nre
+      task: gaussian_linear_uniform, bernoulli_glm_raw
+      task.num_simulations: 100, 1_000, 10_000, 100_000
+
+
+defaults:
+  - _self_
+  - override /partition: cpu2

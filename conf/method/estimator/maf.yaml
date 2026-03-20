@@ -1,0 +1,6 @@
+name: maf
+params:
+  z_score_theta: "independent"
+  z_score_x: "independent"
+  hidden_features: 50
+  num_transforms: 5

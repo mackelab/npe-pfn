@@ -1,0 +1,6 @@
+name: misspecified_prior
+num_simulations: 100
+params:
+  dim: 2
+  mu_m: 2.5 # misspecified prior mean
+  tau_m: 2.0 # misspecified prior variance

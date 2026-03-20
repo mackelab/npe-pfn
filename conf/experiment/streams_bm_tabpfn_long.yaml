@@ -1,0 +1,16 @@
+# @package _global_
+name: sbibm_newtasks
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0,1,2,3,4 
+      eval: nll_sbc
+      method: filtered_tabpfn
+      task: streams
+      task.num_simulations: 10_000
+
+defaults:
+  - _self_
+  - override /partition: h100_long
