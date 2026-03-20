@@ -43,18 +43,21 @@ See `demo.ipynb` for detailed usage examples of both NPE-PFN and TSNPE-PFN.
 
 ## Reproducing Experiments
 
-The full code used to reproduce all experiments is available in the [`main_experiments` branch](https://github.com/mackelab/npe-pfn/tree/main_experiments).
+The full code used to reproduce all experiments is available in the [`main_experiments`](https://github.com/mackelab/npe-pfn/tree/main_experiments) branch.
 
 ## Testing
 
 Some minimal tests are provided. To run them, make sure you have `pytest` installed. Then use the following command:
+
 ```bash
 pytest --log-cli-level=INFO tests
 ```
+
 These tests include timings of the autoregressive and ratio-based log probs.
 
 Some tests should only be run when a GPU is available.
 To run fast, CPU-friendly tests, use
+
 ```bash
 pytest -m fast --log-cli-level=INFO tests
 ```
@@ -64,6 +67,7 @@ pytest -m fast --log-cli-level=INFO tests
 Prior Labs License. Built with PriorLabs-TabPFN.
 
 ## Citation
+
 ```
 @article{vetter2025effortless,
   title={Effortless, Simulation-Efficient Bayesian Inference using Tabular Foundation Models},
