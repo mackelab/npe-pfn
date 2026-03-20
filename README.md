@@ -41,6 +41,10 @@ posterior_samples = posterior_estimator.sample((num_posterior_samples,), x=x_o)
 
 See `demo.ipynb` for detailed usage examples of both NPE-PFN and TSNPE-PFN.
 
+## Reproducing Experiments
+
+The full code used to reproduce all experiments is available in the [`main_experiments` branch](https://github.com/mackelab/npe-pfn/tree/main_experiments).
+
 ## Testing
 
 Some minimal tests are provided. To run them, make sure you have `pytest` installed. Then use the following command:
